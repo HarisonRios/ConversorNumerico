@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>Calculadora</title>
 </head>
-
 <body>
-<!-- Preloader -->
-    <div id="preloader">
-        <div class="loader-text">Conversor Numericos</div>
-    </div>
-
-
+        <div id="preloader">
+                <div class="loader-text">Conversor Numericos</div>
+        </div>
         <header>
                 <h1>Conversor - Decimal</h1>
                 <ul class="navbar">
@@ -32,37 +27,32 @@
                         </li>
                 </ul>
         </header>
-
-
         <div class="container">
                 <div class="itens_container">
                         <h3> Decimal </h3>
-                        <input autocomplete="off" class="input" id="demo1" type="text"
-                                placeholder="Digite o valor em decimal">
+                        <input type="text" id="valorDoDecimal" class="input" placeholder="Digite o valor em decimal">
                 </div>
 
-                <div class="itens_container2"> 
-                <h3>Converter Para:</h3>
-                <select>
-                        <option value="0"> Binario </option>
-                        <option value="1"> Octal </option>
-                        <option value="2"> Hexadecimal</option>
-                </select>
+                <div class="itens_container2">
+                        <h3>Selecione para que tipo voce deseja que seja covertido:</h3>
+                        <select name="" id="escolha_tipo_decimal_para">
+                                <option value="null" disabled selected>Selecione a base inicial</option>
+                                <option value="decimal_para_hexadecimal">Hexadecimal</option>
+                                <option value="decimal_para_octal">Octal</option>
+                                <option value="decimal_para_binario">Binario</option>
+                        </select><br>
                 </div>
-        <br>
-        <button onclick="converter()">Converter</button>
+                <br>
+                <button onclick="CalcularDecimalPara()">Calcular</button><br>
 
-        <br>
-        <p id="demo2"> </p>
+                <br>
+                <p id="exibir"> </p>
         </div>
 
 </body>
-
-</html>
-
-
-
 <script src="script.js"></script>
-</body>
-
 </html>
+
+
+
+

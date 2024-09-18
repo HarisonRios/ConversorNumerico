@@ -29,31 +29,28 @@
 
         <div class="container">
                 <h3>Octal</h3>
-                <input autocomplete="off" class="input" id="demo1" type="text" placeholder="Digite o valor em decimal">
+                <input autocomplete="off" class="input" id="valorDoOctal" type="text" placeholder="Digite o valor em decimal">
 
 
-                <h3>Converter Para:</h3>
-                <select>
-                        <option value="0"> Binario </option>
-                        <option value="1"> Decimal </option>
-                        <option value="2"> Hexadecimal</option>
-                      </select>
+                <h3>Selecione para que tipo voce deseja que seja covertido:</h3>
+                <select name="" id="escolha_tipo_octal_para">
+                        <option value="null" disabled selected>Selecione a base inicial</option>
+                        <option value="octal_para_decimal">Decimal</option>
+                        <option value="octal_para_hexadecimal">Hexadecimal</option>
+                        <option value="octal_para_binario">Binario</option>
+                    </select><br>
                 
                 <br>
-                <button onclick="converter()">Converter</button>
+                <button onclick="CalcularOctalPara()">Calcular</button><br>
         
                 <br>
-                <p id="demo2"> </p>
+                <div id="exibir"></div>
         </div>
 
 </body>
 
 
-</html>
 
-
-
-<script src="script.js"></script>
-</body>
+<script src="../script.js"></script>
 
 </html>

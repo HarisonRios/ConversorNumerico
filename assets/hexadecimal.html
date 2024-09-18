@@ -29,31 +29,24 @@
 
         <div class="container">
                 <h3> Hexadecimal </h3>
-                <input autocomplete="off" class="input" id="demo1" type="text" placeholder="Digite o valor em decimal">
+                <input autocomplete="off" class="input" id="valorDoHexa" type="text" placeholder="Digite o valor em hexadecimal">
 
 
-                <h3>Converter Para:</h3>
-                <select>
-                        <option value="0"> Binario </option>
-                        <option value="1"> Octal </option>
-                        <option value="2"> Decimal </option>
-                      </select>
+                <h3>Selecione para que tipo voce deseja que seja covertido:</h3>
+                <select name="" id="escolha_tipo_hexa_para">
+                        <option value="null" disabled selected>Selecione a base inicial</option>
+                        <option value="hexadecimal_para_decimal">Decimal</option>
+                        <option value="hexadecimal_para_octal">Octal</option>
+                        <option value="hexadecimal_para_binario">Binario</option>
+                    </select><br>
                 
                 <br>
-                <button onclick="converter()">Converter</button>
+                <button onclick="CalcularaHexaPara()">Calcular</button><br>
+                
         
                 <br>
-                <p id="demo2"> </p>
-        </div>
-
+                <div id="exibir"></div>
+        </div>   
 </body>
-
-
-</html>
-
-
-
-<script src="script.js"></script>
-</body>
-
+<script src="../script.js"></script>
 </html>

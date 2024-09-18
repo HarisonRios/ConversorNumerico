@@ -29,31 +29,22 @@
 
         <div class="container">
                 <h3> Binario </h3>
-                <input autocomplete="off" class="input" id="demo1" type="text" placeholder="Digite o valor em decimal">
+                <input autocomplete="off" class="input" id="valorDoBinario" type="text" placeholder="Digite o valor em decimal">
 
 
-                <h3>Converter Para:</h3>
-                <select>
-                        <option value="0"> Decimal </option>
-                        <option value="1"> Octal </option>
-                        <option value="2"> Hexadecimal</option>
-                      </select>
-                
-                <br>
-                <button onclick="converter()">Converter</button>
+                <h3>Selecione para que tipo voce deseja que seja covertido::</h3>
+                <select name="" id="escolha_tipo_binario_para">
+                        <option value="null" disabled selected>tipo convertido</option>
+                        <option value="binario_para_decimal">Decimal</option>
+                        <option value="binario_para_octal">Octal</option>
+                        <option value="binario_para_hexadecimal">Hexadecimal</option>
+                    </select><br>
+                <button onclick="CalcularBinarioPara()"> Converter </button>
         
                 <br>
-                <p id="demo2"> </p>
+                <div id="exibir"></div>
         </div>
 
 </body>
-
-
-</html>
-
-
-
-<script src="script.js"></script>
-</body>
-
+<script src="../script.js"></script>
 </html>
