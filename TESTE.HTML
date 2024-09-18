@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    Conversor para Hexadecimal: <br>
+    <input type="text" id="valorDoHexa"> <br>
+    Selecione para que tipo voce deseja que seja covertido: <br>
+    <select name="" id="escolha_tipo_hexa_para">
+        <option value="null" disabled selected>Selecione a base inicial</option>
+        <option value="hexadecimal_para_decimal">Decimal</option>
+        <option value="hexadecimal_para_octal">Octal</option>
+        <option value="hexadecimal_para_binario">Binario</option>
+    </select><br>
+    <button onclick="CalcularaHexaPara()">Calcular</button><br>
+
+    Conversor para Decimal:<br>
+    <input type="text" id="valorDoDecimal"><br>
+    Selecione para que tipo voce deseja que seja covertido: <br>
+    <select name="" id="escolha_tipo_decimal_para">
+        <option value="null" disabled selected>Selecione a base inicial</option>
+        <option value="decimal_para_hexadecimal">Hexadecimal</option>
+        <option value="decimal_para_octal">Octal</option>
+        <option value="decimal_para_binario">Binario</option>
+    </select><br>
+    <button onclick="CalcularDecimalPara()">Calcular</button><br>
+
+    Conversor para Octal:<br>
+    <input type="text" id="valorDoOctal"> <br>
+    Selecione para que tipo voce deseja que seja covertido: <br>
+    <select name="" id="escolha_tipo_octal_para">
+        <option value="null" disabled selected>Selecione a base inicial</option>
+        <option value="octal_para_decimal">Decimal</option>
+        <option value="octal_para_hexadecimal">Hexadecimal</option>
+        <option value="octal_para_binario">Binario</option>
+    </select><br>
+    <button onclick="CalcularOctalPara()">Calcular</button><br>
+
+    Conversor para Binario:<br>
+    <input type="text" id="valorDoBinario"> <br>
+    Selecione para que tipo voce deseja que seja covertido: <br>
+    <select name="" id="escolha_tipo_binario_para">
+        <option value="null" disabled selected>tipo convertido</option>
+        <option value="binario_para_decimal">Decimal</option>
+        <option value="binario_para_octal">Octal</option>
+        <option value="binario_para_hexadecimal">Hexadecimal</option>
+    </select><br>
+    <button onclick="CalcularBinarioPara()">Calcular</button><br>
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+
+    function CalcularaHexaPara(){
+        exibir.innerHTML = " "
+        var valorBase = Number(valorDoHexa.value)
+        var tipoDoValorBase = escolha_tipo_hexa_para.value
+        var hexaconverter = parseInt(valorBase, 16)
+
+        var decimal = hexaconverter.toString(10);
+        var binario = hexaconverter.toString(2);
+        var octal = hexaconverter.toString(8);
+
+        if (tipoDoValorBase == "hexadecimal_para_decimal") {
+            exibir.innerHTML = `o valor covertido foi:${decimal}`
+
+        }
+        else if (tipoDoValorBase == "hexadecimal_para_binario") {
+            exibir.innerHTML = `o valor covertido foi:${binario}`
+        } else if (tipoDoValorBase == "hexadecimal_para_octal") {
+            exibir.innerHTML = `o valor covertido foi:${octal}`
+        }
+        else {
+            exibir.innerHTML = `valores incopativeis,favor selecione algo e digite um valor em Binario`
+        }
+    }
+
+    function CalcularDecimalPara() {
+        exibir.innerHTML = " "
+        var valorBase = Number(valorDoDecimal.value)
+        var tipoDoValorBase = escolha_tipo_decimal_para.value
+
+        var hexadecimal = binarioconverter.toString(16);
+        var binario = binarioconverter.toString(2);
+        var octal = binarioconverter.toString(8);
+
+        if (tipoDoValorBase == "null" || valorBase == "") {
+            exibir.innerHTML = `valores incopativeis,favor selecione algo e digite um valor em Binario`
+        }
+        else if (tipoDoValorBase == "decimal_para_binario") {
+            exibir.innerHTML = `o valor covertido foi:${binario}`
+        } else if (tipoDoValorBase == "decimal_para_octal") {
+            exibir.innerHTML = `o valor covertido foi:${octal}`
+        }
+        else {
+            exibir.innerHTML = `o valor covertido foi:${hexadecimal}`
+        }
+    }
+    
+    function CalcularOctalPara() {
+        exibir.innerHTML = " "
+        var valorBase = Number(valorDoOctal.value)
+        var tipoDoValorBase = escolha_tipo_octal_para.value
+        var octalconverter = parseInt(valorBase, 8)
+
+        var hexadecimal = octalconverter.toString(16);
+        var decimal = octalconverter.toString(10);
+        var binario = octalconverter.toString(2);
+
+        if (tipoDoValorBase == "null" || valorBase == "") {
+            exibir.innerHTML = `valores incopativeis,favor selecione algo e digite um valor em Binario`
+        }
+        else if (tipoDoValorBase == "octal_para_decimal") {
+            exibir.innerHTML = `o valor covertido foi:${decimal}`
+        } else if (tipoDoValorBase == "octal_para_binario") {
+            exibir.innerHTML = `o valor covertido foi:${binario}`
+        }
+        else {
+            exibir.innerHTML = `o valor covertido foi:${hexadecimal}`
+        }
+    }
+
+    function CalcularBinarioPara() {
+        exibir.innerHTML = " "
+        var valorBase = Number(valorDoBinario.value)
+        var tipoDoValorBase = escolha_tipo_binario_para.value
+        var binarioconverter = parseInt(valorBase, 2)
+
+        var hexadecimal = binarioconverter.toString(16);
+        var decimal = binarioconverter.toString(10);
+        var octal = binarioconverter.toString(8);
+
+        if (tipoDoValorBase == "null" || valorBase == "") {
+            exibir.innerHTML = `valores incopativeis,favor selecione algo e digite um valor em Binario`
+        }
+        else if (tipoDoValorBase == "binario_para_decimal") {
+            exibir.innerHTML = `o valor covertido foi:${decimal}`
+        } else if (tipoDoValorBase == "binario_para_octal") {
+            exibir.innerHTML = `o valor covertido foi:${octal}`
+        }
+        else {
+            exibir.innerHTML = `o valor covertido foi:${hexadecimal}`
+        }
+    }
+</script>
