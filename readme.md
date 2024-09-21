@@ -2,11 +2,19 @@
 
 ![Windows XP](assets/img/background.gif)
 
-Este projeto é um conversor de números entre diferentes bases (binário, octal, hexadecimal e decimal), com uma interface estilizada ao estilo do Windows XP.
+Este projeto é um conversor de números entre diferentes bases (binário, octal, hexadecimal e decimal), com uma interface estilizada ao estilo do Windows XP. 
+
 
 
 ## 🌐 Deploy 
 Clique aqui para acessar o site: [Conversor Numérico](https://conversorn.vercel.app/)
+
+
+## ⚠️ Aviso Importante
+
+Este conversor numérico **não é responsivo**, ou seja, ele foi projetado exclusivamente para ser utilizado em navegadores web no **desktop**. O layout e as funcionalidades podem não ser exibidos corretamente em dispositivos móveis, tablets ou telas menores.
+
+Para garantir a melhor experiência, acesse o site em um computador com um navegador de desktop.
 
 
 
