@@ -3,50 +3,88 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/xp.css">
         <link rel="stylesheet" href="../style.css">
-        <title>Calculadora Sistemas Numericos - Hexadecimal</title>
+        <link rel="shortcut icon" href="https://seeklogo.com/images/W/windows-xp-icon-logo-E8F84DD6F3-seeklogo.com.png">
+        <title>Calculadora - Windows XP</title>
 </head>
-
 <body>
         <header>
-                <h1>Conversor - Hexadecimal</h1>
                 <ul class="navbar">
-                        <li>
-                                <a href="../index.html">Decimal</a>
-                        </li>
-                        <li>
-                                <a href="/assets/binario.html">Binário</a>
-                        </li>
-                        <li>
-                                <a href="/assets/octal.html">Octal</a>
-                        </li>
-                        <li>
-                                <a href="/assets/hexadecimal.html">Hexadecimal</a>
-                        </li>
+                    <li>
+                        <a href="../index.html" class="xp-btn">Decimal</a>
+                    </li>
+                    <li>
+                        <a href="/assets/binario.html" class="xp-btn">Binário</a>
+                    </li>
+                    <li>
+                        <a href="/assets/octal.html" class="xp-btn">Octal</a>
+                    </li>
+                    <li>
+                        <a href="/assets/hexadecimal.html" class="xp-btn">Hexadecimal</a>
+                    </li>
                 </ul>
-        </header>
-
-
-        <div class="container">
-                <h3> Hexadecimal </h3>
-                <input autocomplete="off" class="input" id="valorDoHexa" type="text" placeholder="Digite o valor em hexadecimal">
-
-
-                <h3>Selecione para que tipo voce deseja que seja covertido:</h3>
-                <select name="" id="escolha_tipo_hexa_para">
-                        <option value="null" disabled selected>Selecione a base inicial</option>
-                        <option value="hexadecimal_para_decimal">Decimal</option>
-                        <option value="hexadecimal_para_octal">Octal</option>
-                        <option value="hexadecimal_para_binario">Binario</option>
-                    </select><br>
                 
-                <br>
+            </header>
+
+            
+        <div class="window container">
+                <div class="title-bar">
+                  <div class="title-bar-text">Hexadecimal Conversor</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+
+    
+
+
+                <div class="itens_container">
+                <div class="window">
+                        <div class="title-bar">
+                          <div class="title-bar-text">Command Prompt</div>
+                          <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                          </div>
+                        </div>
+                        <div class="window-body">
+                          <pre>Microsoft&#10094;R&#10095; Windows DOS &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+                            <br>C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily with a window and pre tag
+                          </pre>  
+                          <input id="valorDoHexa" type="text" placeholder="Digite o valor em Hexadecimal">
+                        </div>
+                        </div>
+                      </div><br>
+
+
+              
+                <div class="itens_container2">
+                        <h3>Selecione a base que deseja coverter:</h3>
+                        <select name="" id="escolha_tipo_hexa_para">
+                                <option value="null" disabled selected>Selecione a base inicial</option>
+                                <option value="hexadecimal_para_decimal">Decimal</option>
+                                <option value="hexadecimal_para_octal">Octal</option>
+                                <option value="hexadecimal_para_binario">Binario</option>
+                            </select><br>
+                </div>
+                <br><br><br>
                 <button onclick="CalcularaHexaPara()">Calcular</button><br>
-                
         
+                
+
                 <br>
-                <div id="exibir"></div>
-        </div>   
+                <p id="exibir"> </p>
+                    
+        
+        </div>
 </body>
 <script src="../script.js"></script>
 </html>
+
+
+
+
